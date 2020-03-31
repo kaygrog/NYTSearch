@@ -25,15 +25,14 @@
 							<input
 								type="search"
 								class="form-control"
-								id="searchTerm"
-								aria-describedby="emailHelp"
+								id="search-term"
 							/>
 						</div>
 						<div class="form-group">
-							<label for="exampleFormControlSelect1"
-								>Number of Records to Retrieve</label
+							<label>
+								Number of Records to Retrieve:</label
 							>
-							<select class="form-control" id="exampleFormControlSelect1">
+							<select class="form-control" id="num-records">
 								<option>1</option>
 								<option>5</option>
 								<option>10</option>
@@ -44,8 +43,7 @@
 							<input
 								type="search"
 								class="form-control"
-								id="searchTerm"
-								aria-describedby="emailHelp"
+								id="start-year"
 							/>
 						</div>
 						<div class="form-group">
@@ -53,14 +51,19 @@
 							<input
 								type="search"
 								class="form-control"
-								id="searchTerm"
-								aria-describedby="emailHelp"
-							/>
-						</div>
+								id="end-year"
+                            />
+                        </div>
+                        <button id="search-btn" type="search" class="btn btn-primary">Search</button>
+                        <button id="clear-btn" type="clear" class="btn btn-primary">Clear Results</button>
 					</form>
 				</div>
 			</div>
-		</div>
+        </div>
+        
+        <nav class="navbar navbar-light bg-light">
+            <span class="navbar-brand mb-0 h1">Top Articles</span>
+        </nav>
 
 		<script
 			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
