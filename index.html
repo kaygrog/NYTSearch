@@ -19,51 +19,48 @@
 					<h1 class="display-4">New York Times Search</h1>
 				</div>
 				<div>
-					<form>
-						<div class="form-group">
-							<label>Search Term: </label>
-							<input
-								type="search"
-								class="form-control"
-								id="search-term"
-							/>
-						</div>
-						<div class="form-group">
-							<label>
-								Number of Records to Retrieve:</label
-							>
-							<select class="form-control" id="num-records">
-								<option>1</option>
-								<option>5</option>
-								<option>10</option>
-							</select>
-						</div>
-						<div class="form-group">
-							<label>Start Year(Optional):</label>
-							<input
-								type="search"
-								class="form-control"
-								id="start-year"
-							/>
-						</div>
-						<div class="form-group">
-							<label>End Year(Optional): </label>
-							<input
-								type="search"
-								class="form-control"
-								id="end-year"
-                            />
-                        </div>
-                        <button id="search-btn" type="search" class="btn btn-primary">Search</button>
-                        <button id="clear-btn" type="clear" class="btn btn-primary">Clear Results</button>
-					</form>
+					<div class="parameter-section">
+						<form>
+							<nav class="navbar navbar-dark bg-dark">
+								<span class="navbar-brand mb-0 h1">Search Parameters</span>
+							</nav>
+							<div class="form-group">
+								<label>Search Term: </label>
+								<input type="search" class="form-control" id="search-term" />
+							</div>
+							<div class="form-group">
+								<label> Number of Records to Retrieve:</label>
+								<select class="form-control" id="num-records">
+									<option>1</option>
+									<option>5</option>
+									<option>10</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label>Start Year(Optional):</label>
+								<input type="search" class="form-control" id="start-year" />
+							</div>
+							<div class="form-group">
+								<label>End Year(Optional): </label>
+								<input type="search" class="form-control" id="end-year" />
+							</div>
+							<button id="search-btn" type="search" class="btn btn-primary">
+								Search
+							</button>
+							<button id="clear-btn" type="clear" class="btn btn-primary">
+								Clear Results
+							</button>
+						</form>
+					</div>
 				</div>
 			</div>
-        </div>
-        
-        <nav class="navbar navbar-light bg-light">
-            <span class="navbar-brand mb-0 h1">Top Articles</span>
-        </nav>
+		</div>
+		<div class="jumbotron jumbotron-fluid">
+			<nav class="navbar navbar-dark bg-dark">
+				<span class="navbar-brand mb-0 h1">Top Articles</span>
+			</nav>
+			<p>search result</p>
+		</div>
 
 		<script
 			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
