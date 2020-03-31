@@ -7,28 +7,34 @@
 var topArticles = $('#top-articles')
 
 
+// $(document).ready(function() {
+    $('#search-btn').on("click", function(event) {
+        console.log("Button clicked");
+        event.preventDefault();
+        var searchTerm = $('#search-term').val();
+        var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + searchTerm + "&api-key=KeGskohuzkW74NHKCcYAKAOqyGG89WXw";
+        
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(hotsauce) {
+                console.log(hotsauce.response.docs);
 
-$('#search').on('click', function() {
-    var searchTerm = $('#search-term').val()
-    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + searchTerm + "&api-key=KeGskohuzkW74NHKCcYAKAOqyGG89WXw&limit=3";
-    
-    $.ajax({
-        url: queryURL,
-        method: "GET"
+                // Grab headline and authors from response
+                // Insert into "top-articles" div
+                var responseArray = hotsauce.response.docs;
+                for (var i=0; i < 4; i++) {
+                    var headline = JSON.stringify(responseArray[i].abstract);
+
+                    topArticles.append(headline);
+                }
+
+                console.log(responseArray[0].abstract);
+                
+
+                
+            })
     })
-        .then(function(hotsauce) {
-            // Grab headline and authors from response
-            // Insert into "top-articles" div
-            var responseArray = hotsauce.response.docs;
-            for (var i=0; i < 4; i++) {
-                topArticles.html(responseArray[i]);
-            }
-
-            console.log(responseArray[0].abstract);
-            
-
-            
-        })
-})
+// })
 
     
