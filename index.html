@@ -4,63 +4,68 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
 		<link
 			rel="stylesheet"
 			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 			crossorigin="anonymous"
 		/>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
 	</head>
 	<body>
-		<div class="jumbotron jumbotron-fluid">
-			<div class="container">
-				<div>
-					<h1 class="display-4">New York Times Search</h1>
-				</div>
-				<div>
-					<div class="parameter-section">
-						<form>
-							<nav class="navbar navbar-dark bg-dark">
-								<span class="navbar-brand mb-0 h1">Search Parameters</span>
-							</nav>
-							<div class="form-group">
-								<label>Search Term: </label>
-								<input type="search" class="form-control" id="search-term" />
-							</div>
-							<div class="form-group">
-								<label> Number of Records to Retrieve:</label>
-								<select class="form-control" id="num-records">
-									<option>1</option>
-									<option>5</option>
-									<option>10</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label>Start Year(Optional):</label>
-								<input type="search" class="form-control" id="start-year" />
-							</div>
-							<div class="form-group">
-								<label>End Year(Optional): </label>
-								<input type="search" class="form-control" id="end-year" />
-							</div>
-							<button id="search-btn" type="search" class="btn btn-primary">
-								Search
-							</button>
-							<button id="clear-btn" type="clear" class="btn btn-primary">
-								Clear Results
-							</button>
-						</form>
+		<div class="container">
+			<div class="jumbotron text-white bg-dark text-center ">
+				<h1 class="display-4 font-weight-bold"><i class="far fa-newspaper"></i>New York Times Search</h1>
+			</div>
+			<div class="card" id="parameter-section">
+				<h5 class="card-header text-white bg-dark"><i class="far fa-list-alt"></i>Search Parameters</h5>
+				<form>
+					<div class="form-group">
+						<label>Search Term: </label>
+						<input type="search" class="form-control" id="search-term" />
 					</div>
+					<div class="form-group">
+						<label> Number of Records to Retrieve:</label>
+						<select class="form-control" id="num-records">
+							<option>1</option>
+							<option>5</option>
+							<option>10</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Start Year(Optional):</label>
+						<input type="search" class="form-control" id="start-year" />
+					</div>
+					<div class="form-group">
+						<label>End Year(Optional): </label>
+						<input type="search" class="form-control" id="end-year" />
+					</div>
+					<button id="search-btn" type="search" class="btn btn-dark btn-lg">
+					<i class="fas fa-search"></i>Search
+					</button>
+					<button id="clear-btn" type="clear" class="btn btn-dark btn-lg">
+					<i class="far fa-trash-alt"></i>Clear Results
+					</button>
+				</form>
+			</div>
+
+			<div id="articles-section" class="card">
+				<h5 class="card-header text-white bg-dark"><i class="fas fa-border-all"></i>Top Articles</h5>
+				<div class="card-body">
+					<div id="search-results"></div>
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
 		<div class="jumbotron jumbotron-fluid">
 			<nav class="navbar navbar-dark bg-dark">
 				<span class="navbar-brand mb-0 h1">Top Articles</span>
 			</nav>
 			<div id="top-articles"></div>
 		</div>
+=======
+>>>>>>> 08102c3efacf592168b59f271c88b55a4c623a2e
 
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="search.js"></script>
@@ -74,5 +79,6 @@
 			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 			crossorigin="anonymous"
 		></script>
+		
 	</body>
 </html>
